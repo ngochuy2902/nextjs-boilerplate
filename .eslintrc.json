@@ -1,0 +1,75 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"]
+      }
+    }
+  },
+  "extends": [
+    "airbnb-base",
+    "next/core-web-vitals",
+    "next",
+    "prettier",
+    "eslint-config-prettier",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "no-console": "warn",
+    "no-use-before-define": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-shadow": "off",
+    "semi": ["warn", "always"],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "acc", // for reduce accumulators
+          "e", // for e.returnvalue
+          "state" // for redux toolkit
+        ]
+      }
+    ],
+    "no-unused-expressions": "off",
+    "global-require": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "class-methods-use-this": "off",
+    "prefer-promise-reject-errors": "off",
+    "camelcase": "off",
+    "react/prop-types": "off"
+  },
+  "root": true,
+  "ignorePatterns": ["coverage"]
+}
